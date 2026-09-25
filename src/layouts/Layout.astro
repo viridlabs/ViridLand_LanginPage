@@ -1,0 +1,52 @@
+---
+import '../styles/global.css';
+const { frontmatter } = Astro.props;
+const base = import.meta.env.BASE_URL;
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/png" href={`${base}/favicon.png`} />
+		<link rel="icon" href={`${base}/favicon.ico`} />
+		<link rel="apple-touch-icon" href={`${base}/apple-touch-icon.png`} />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{frontmatter.title}</title>
+	</head>
+	<body class="bg-persian-black text-ivory font-sans antialiased min-h-screen flex flex-col items-center justify-center p-8 sm:p-16">
+		<main class="max-w-2xl w-full text-center space-y-8 prose prose-invert prose-green mx-auto">
+			<style is:global>
+				h1 {
+					@apply text-3xl sm:text-4xl font-serif text-persian-gold mb-6 mt-8;
+				}
+				h2 {
+					@apply text-2xl font-serif text-persian-green mt-12 mb-6;
+				}
+				p {
+					@apply text-lg leading-relaxed text-gray-300 mb-6;
+				}
+				ul {
+					@apply text-left text-lg text-gray-300 space-y-4 mb-8 list-none pl-0;
+				}
+				li {
+					@apply relative pl-6;
+				}
+				li::before {
+					content: "•";
+					@apply absolute left-0 text-persian-gold;
+				}
+				strong {
+					@apply text-ivory font-semibold;
+				}
+				a {
+					@apply text-persian-gold hover:text-ivory transition-colors duration-300 underline underline-offset-4;
+				}
+				hr {
+					@apply border-t border-persian-green/30 my-12;
+				}
+			</style>
+			<slot />
+		</main>
+	</body>
+</html>

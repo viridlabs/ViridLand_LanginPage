@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --color-persian-green: #1B6B4A;
+  --color-persian-gold: #C8A84E;
+  --color-persian-black: #0A0E1A;
+  --color-ivory: #F5ECD7;
+}
+
+body {
+  background-color: var(--color-persian-black);
+  color: var(--color-ivory);
+}
