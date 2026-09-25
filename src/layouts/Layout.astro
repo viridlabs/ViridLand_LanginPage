@@ -15,35 +15,35 @@ const base = import.meta.env.BASE_URL;
 		<title>{frontmatter.title}</title>
 	</head>
 	<body class="bg-persian-black text-ivory font-sans antialiased min-h-screen flex flex-col items-center justify-center p-8 sm:p-16">
-		<main class="max-w-2xl w-full text-center space-y-8 prose prose-invert prose-green mx-auto">
+		<main class="max-w-2xl w-full text-center space-y-12 prose prose-invert prose-green mx-auto">
 			<style is:global>
 				h1 {
-					@apply text-3xl sm:text-4xl font-serif text-persian-gold mb-6 mt-8;
+					@apply text-3xl sm:text-4xl font-serif text-persian-gold mb-8 mt-12 font-normal tracking-wide;
 				}
 				h2 {
-					@apply text-2xl font-serif text-persian-green mt-12 mb-6;
+					@apply text-xl sm:text-2xl font-serif text-persian-green mt-16 mb-8 font-normal tracking-wide uppercase;
 				}
 				p {
-					@apply text-lg leading-relaxed text-gray-300 mb-6;
+					@apply text-lg sm:text-xl leading-relaxed text-gray-300 mb-8 font-light;
 				}
 				ul {
-					@apply text-left text-lg text-gray-300 space-y-4 mb-8 list-none pl-0;
+					@apply text-left text-lg sm:text-xl text-gray-300 space-y-6 mb-12 list-none pl-0 font-light;
 				}
 				li {
-					@apply relative pl-6;
+					@apply relative pl-8;
 				}
 				li::before {
-					content: "•";
+					content: "—";
 					@apply absolute left-0 text-persian-gold;
 				}
 				strong {
-					@apply text-ivory font-semibold;
+					@apply text-ivory font-normal;
 				}
 				a {
-					@apply text-persian-gold hover:text-ivory transition-colors duration-300 underline underline-offset-4;
+					@apply text-persian-gold hover:text-ivory transition-colors duration-300 underline underline-offset-8 decoration-1;
 				}
 				hr {
-					@apply border-t border-persian-green/30 my-12;
+					@apply border-t border-persian-green/20 my-16 w-24 mx-auto;
 				}
 			</style>
 			<slot />
