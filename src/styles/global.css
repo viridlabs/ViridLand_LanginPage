@@ -130,7 +130,7 @@ a:hover {
 }
 
 .sign-in-panel {
-  width: calc(100% / var(--phi));
+  width: 100%;
   margin-inline: auto;
   margin-top: var(--s2);
   padding: var(--s2);
@@ -140,7 +140,8 @@ a:hover {
 }
 
 .sign-in-panel h1 {
-  margin-top: 0;
+  margin: 0 0 var(--s1);
+  font-size: var(--s2);
 }
 
 .sign-in-form {
@@ -203,6 +204,10 @@ a:hover {
 
 .sign-in-form .forgot-toggle:hover {
   color: var(--color-ivory);
+}
+
+.forgot-password[hidden] {
+  display: none;
 }
 
 .forgot-password {

@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-const { frontmatter } = Astro.props;
+const { frontmatter, showLogo = true } = Astro.props;
 const base = import.meta.env.BASE_URL;
 ---
 
@@ -23,11 +23,13 @@ const base = import.meta.env.BASE_URL;
 			<a class="sign-in-link" href={`${base}sign-in`}>Sign in</a>
 		</header>
 		<main class="column">
-			<img
-				src={`${base}ViridLand_Lockup_Master.png`}
-				alt="ViridLand"
-				class="logo"
-			/>
+			{showLogo && (
+				<img
+					src={`${base}ViridLand_Lockup_Master.png`}
+					alt="ViridLand"
+					class="logo"
+				/>
+			)}
 			<slot />
 		</main>
 	</body>
