@@ -1,0 +1,16 @@
+---
+const base = import.meta.env.BASE_URL;
+---
+
+<form class="sign-in-form" onsubmit="return false">
+	<label>
+		Username
+		<input type="text" name="username" autocomplete="username" />
+	</label>
+	<label>
+		Password
+		<input type="password" name="password" autocomplete="current-password" />
+	</label>
+	<button type="button">Sign in</button>
+</form>
+<p><a href={base}>Return to the landing page</a></p>

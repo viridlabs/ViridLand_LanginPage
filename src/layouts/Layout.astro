@@ -18,12 +18,15 @@ const base = import.meta.env.BASE_URL;
 		<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;1,9..40,300&display=swap" rel="stylesheet" />
 		<title>{frontmatter.title}</title>
 	</head>
-	<body class="bg-persian-black text-ivory font-sans antialiased min-h-screen flex flex-col items-center justify-start px-6 py-12 md:px-10 md:py-16 lg:px-16 lg:py-20">
-		<main class="w-full max-w-xl text-center mx-auto lg:max-w-2xl">
+	<body class="bg-persian-black text-ivory font-sans antialiased min-h-screen">
+		<header class="topbar">
+			<a class="sign-in-link" href={`${base}sign-in`}>Sign in</a>
+		</header>
+		<main class="column">
 			<img
 				src={`${base}ViridLand_Lockup_Master.png`}
 				alt="ViridLand"
-				class="mx-auto w-full max-w-xs mb-10 md:max-w-md md:mb-14 lg:max-w-lg lg:mb-16"
+				class="logo"
 			/>
 			<slot />
 		</main>

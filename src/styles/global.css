@@ -9,36 +9,221 @@
   --color-ivory: #F5ECD7;
 }
 
+:root {
+  --phi: 1.618;
+  --s0: 0.75rem;
+  --s1: calc(var(--s0) * var(--phi));
+  --s2: calc(var(--s1) * var(--phi));
+  --s3: calc(var(--s2) * var(--phi));
+  --s4: calc(var(--s3) * var(--phi));
+}
+
 body {
   background-color: var(--color-persian-black);
   color: var(--color-ivory);
+  padding: var(--s1);
+}
+
+.topbar {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  min-height: 2.75rem;
+  margin-bottom: var(--s1);
+}
+
+.sign-in-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding-inline: var(--s1);
+  color: var(--color-persian-gold);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+
+.sign-in-link:hover {
+  color: var(--color-ivory);
+}
+
+.column {
+  width: 100%;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.logo {
+  width: calc(100% / var(--phi));
+  height: auto;
+  margin-inline: auto;
+  margin-bottom: var(--s2);
 }
 
 h1 {
-  @apply font-serif text-persian-gold font-normal tracking-wide text-3xl mt-10 mb-6 md:text-4xl md:mt-12 lg:text-4xl;
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: var(--color-persian-gold);
+  font-size: var(--s2);
+  margin-top: var(--s2);
+  margin-bottom: var(--s1);
 }
 
 h2 {
-  @apply font-serif text-persian-green font-normal tracking-wide uppercase text-lg mt-12 mb-6 md:text-xl md:mt-14 lg:text-2xl lg:mt-16;
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-persian-green);
+  font-size: var(--s1);
+  margin-top: var(--s3);
+  margin-bottom: var(--s1);
 }
 
 p {
-  @apply font-light leading-relaxed text-gray-300 text-base mb-6 md:text-lg md:mb-8 lg:text-xl;
+  font-weight: 300;
+  line-height: var(--phi);
+  color: #d1d5db;
+  font-size: 1rem;
+  margin-bottom: var(--s1);
 }
 
 ul {
-  @apply text-left list-none pl-0 font-light text-gray-300 space-y-4 mb-8 text-base md:text-lg md:space-y-5 lg:text-xl lg:space-y-6 lg:mb-12;
+  text-align: left;
+  list-style: none;
+  padding-left: 0;
+  font-weight: 300;
+  color: #d1d5db;
+  font-size: 1rem;
+  margin-bottom: var(--s2);
 }
 
 li {
-  @apply relative pl-8;
+  position: relative;
+  padding-left: var(--s2);
+  margin-bottom: var(--s1);
 }
 
 li::before {
   content: "—";
-  @apply absolute left-0 text-persian-gold;
+  position: absolute;
+  left: 0;
+  color: var(--color-persian-gold);
 }
 
 a {
-  @apply text-persian-gold underline decoration-1 underline-offset-4 break-words transition-colors duration-300 hover:text-ivory md:underline-offset-8;
+  color: var(--color-persian-gold);
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+  text-decoration-thickness: 1px;
+  overflow-wrap: anywhere;
+  transition: color 300ms;
+}
+
+a:hover {
+  color: var(--color-ivory);
+}
+
+.sign-in-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s1);
+  width: calc(100% / var(--phi));
+  margin-inline: auto;
+  margin-top: var(--s2);
+  text-align: left;
+}
+
+.sign-in-form label {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--s0) / var(--phi));
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  color: var(--color-ivory);
+}
+
+.sign-in-form input {
+  min-height: 2.75rem;
+  padding: 0 var(--s1);
+  border: 1px solid color-mix(in srgb, var(--color-persian-gold) 45%, transparent);
+  background: transparent;
+  color: var(--color-ivory);
+  font: inherit;
+}
+
+.sign-in-form button {
+  min-height: 2.75rem;
+  margin-top: var(--s0);
+  border: 1px solid var(--color-persian-gold);
+  background: transparent;
+  color: var(--color-persian-gold);
+  font: inherit;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+}
+
+.sign-in-form button:hover {
+  color: var(--color-ivory);
+  border-color: var(--color-ivory);
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: var(--s2);
+  }
+
+  .column {
+    max-width: min(100%, calc(100vw / var(--phi)));
+  }
+
+  .logo {
+    margin-bottom: var(--s3);
+  }
+
+  h1 {
+    font-size: var(--s3);
+    margin-top: var(--s2);
+  }
+
+  h2 {
+    font-size: var(--s2);
+    margin-top: var(--s3);
+  }
+
+  p,
+  ul {
+    font-size: var(--s1);
+  }
+
+  p {
+    margin-bottom: var(--s2);
+  }
+
+  li {
+    margin-bottom: var(--s1);
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    padding: var(--s3);
+  }
+
+  .column {
+    max-width: min(42rem, calc(100vw / var(--phi)));
+  }
+
+  .logo {
+    margin-bottom: var(--s3);
+  }
+
+  h1 {
+    font-size: var(--s3);
+  }
+
+  ul {
+    margin-bottom: var(--s3);
+  }
 }
