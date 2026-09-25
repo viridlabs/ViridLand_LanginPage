@@ -1,32 +1,25 @@
 ---
 layout: ../layouts/Layout.astro
-title: ViridLand | Building for the Next Century
+title: ViridLand
 ---
-
-<img src="/ViridLand_LanginPage/ViridLand_Lockup_Master.png" alt="ViridLand Logo" class="mx-auto w-full max-w-lg mb-16" />
 
 # We build for 100 years, not 10.
 
-ViridLand is an AI-native, sustainability-led property developer. We partner with landowners to create enduring value.
+ViridLand develops property with landowners. Each project is designed for net-zero operation and a minimum 10% biodiversity net gain.
 
-We do not build for quick extraction. We design and deliver net-zero, biodiversity-positive developments built to stand for a century.
+The buildings are specified to stand for a century.
 
-If you have received a letter from us, our intelligence systems identified your land as having extraordinary potential for sustainable development.
+## The work
 
-## The Partnership
+- Biodiversity net gain of at least 10% on every project.
+- Planning carried out with discretion.
+- Terms set out in writing before any commitment.
+- The same group as [ViridIQ](https://viridiq.com).
 
-- **Respect for the Land:** Minimum 10% biodiversity net gain on every project.
-- **Quiet Authority:** Absolute discretion throughout the planning process.
-- **Shared Value:** Agreements structured so you share in the value created.
-- **Institutional Capability:** Powered by the intelligence layer of our consulting arm, [ViridIQ](https://viridiq.com).
+## Next step
 
----
+Write when you are ready.
 
-## Next Steps
+[info@viridland.com](mailto:info@viridland.com)
 
-We would welcome the opportunity to discuss your land's potential. Entirely at your pace.
-
-**Contact us directly:**  
-[partnerships@viridgroup.com](mailto:partnerships@viridgroup.com)
-
-*ViridLand is a division of the Virid Group. Principal-led. Every engagement.*
+ViridLand is part of the Virid Group.

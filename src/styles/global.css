@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
 @theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "DM Sans", system-ui, sans-serif;
   --color-persian-green: #1B6B4A;
   --color-persian-gold: #C8A84E;
   --color-persian-black: #0A0E1A;
@@ -10,4 +12,33 @@
 body {
   background-color: var(--color-persian-black);
   color: var(--color-ivory);
+}
+
+h1 {
+  @apply font-serif text-persian-gold font-normal tracking-wide text-3xl mt-10 mb-6 md:text-4xl md:mt-12 lg:text-4xl;
+}
+
+h2 {
+  @apply font-serif text-persian-green font-normal tracking-wide uppercase text-lg mt-12 mb-6 md:text-xl md:mt-14 lg:text-2xl lg:mt-16;
+}
+
+p {
+  @apply font-light leading-relaxed text-gray-300 text-base mb-6 md:text-lg md:mb-8 lg:text-xl;
+}
+
+ul {
+  @apply text-left list-none pl-0 font-light text-gray-300 space-y-4 mb-8 text-base md:text-lg md:space-y-5 lg:text-xl lg:space-y-6 lg:mb-12;
+}
+
+li {
+  @apply relative pl-8;
+}
+
+li::before {
+  content: "—";
+  @apply absolute left-0 text-persian-gold;
+}
+
+a {
+  @apply text-persian-gold underline decoration-1 underline-offset-4 break-words transition-colors duration-300 hover:text-ivory md:underline-offset-8;
 }
