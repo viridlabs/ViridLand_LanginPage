@@ -37,7 +37,10 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 2.75rem;
+  padding-block: var(--s0);
   padding-inline: var(--s1);
+  border: 1px solid #C8A84E;
+  border-radius: var(--s0);
   color: var(--color-persian-gold);
   text-decoration: none;
   letter-spacing: 0.04em;
@@ -45,6 +48,7 @@ body {
 
 .sign-in-link:hover {
   color: var(--color-ivory);
+  border-color: var(--color-ivory);
 }
 
 .column {
