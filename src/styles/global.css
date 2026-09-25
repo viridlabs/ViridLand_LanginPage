@@ -125,13 +125,26 @@ a:hover {
   color: var(--color-ivory);
 }
 
+.sign-in-panel {
+  width: calc(100% / var(--phi));
+  margin-inline: auto;
+  margin-top: var(--s2);
+  padding: var(--s2);
+  border: 1px solid #C8A84E;
+  border-radius: var(--s1);
+  text-align: center;
+}
+
+.sign-in-panel h1 {
+  margin-top: 0;
+}
+
 .sign-in-form {
   display: flex;
   flex-direction: column;
   gap: var(--s1);
-  width: calc(100% / var(--phi));
-  margin-inline: auto;
-  margin-top: var(--s2);
+  width: 100%;
+  margin-top: var(--s1);
   text-align: left;
 }
 
@@ -157,6 +170,7 @@ a:hover {
   min-height: 2.75rem;
   margin-top: var(--s0);
   border: 1px solid var(--color-persian-gold);
+  border-radius: var(--s1);
   background: transparent;
   color: var(--color-persian-gold);
   font: inherit;
@@ -167,6 +181,35 @@ a:hover {
 .sign-in-form button:hover {
   color: var(--color-ivory);
   border-color: var(--color-ivory);
+}
+
+.sign-in-form .forgot-toggle {
+  align-self: flex-start;
+  min-height: auto;
+  margin-top: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--color-persian-gold);
+  letter-spacing: 0.04em;
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+  text-decoration-thickness: 1px;
+}
+
+.sign-in-form .forgot-toggle:hover {
+  color: var(--color-ivory);
+}
+
+.forgot-password {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s1);
+}
+
+.forgot-password p {
+  margin: 0;
+  font-size: 0.9rem;
 }
 
 @media (min-width: 768px) {
